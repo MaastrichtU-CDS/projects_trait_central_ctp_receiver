@@ -1,5 +1,5 @@
 #Install required packages
-#yum install git wget screen vim
+#yum install git wget screen vim httpd
 
 #Add ctpservice user
 #adduser svcctp
@@ -34,3 +34,8 @@ rm CTP-installer.jar
 rm -Rf META-INF/ config/ org/
 
 cp ~/Repositories/trait_ctp_receiver/config.xml CTP/config.xml
+cp ~/Repositories/trait_ctp_receiver/startup.sh startup.sh
+
+cp ~/Repositories/trait_ctp_receiver/ctp-proxy.conf /etc/httpd/conf.d/ctp-proxy.conf
+
+sudo systemctl enable httpd
