@@ -1,0 +1,21 @@
+<Configuration>
+    <Server
+        maxThreads="20"
+        port="8080"/>
+    <Pipeline name="PUBLIC_RECEIVER">
+        <HttpImportService
+            acceptFileObjects="no"
+            class="org.rsna.ctp.stdstages.HttpImportService"
+            logConnections="no"
+            name="HttpImportService"
+            port="23104"
+            quarantine="quarantines/HttpImportService"
+            root="roots/HttpImportService"/>
+        <DicomExportService
+            class="org.rsna.ctp.stdstages.DicomExportService"
+            name="DicomExportService"
+            quarantine="quarantines/DicomExportService"
+            root="roots/DicomExportService"
+            url=""/>
+    </Pipeline>
+</Configuration>
