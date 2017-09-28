@@ -6,7 +6,7 @@
 #passwd svcctp
 
 ##########
-# manual: perform as root "chown -R svcctp:root /opt"
+# sudo -c "chown -R $USER:root /opt"
 ##########
 
 #set install home directory
@@ -32,3 +32,5 @@ wget --no-check-certificate http://mirc.rsna.org/download/CTP-installer.jar
 jar xf CTP-installer.jar
 rm CTP-installer.jar
 rm -Rf META-INF/ config/ org/
+
+cp ~/Repositories/trait_ctp_receiver/config.xml CTP/config.xml
