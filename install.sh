@@ -19,14 +19,11 @@ wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-
 
 #set java home
 JAVA_HOME="$INSTALL_HOME/jdk1.8.0_144"
-PATH="$PATH:$JAVA_HOME/bin"
+PATH="$JAVA_HOME/bin:$PATH"
 export JAVA_HOME PATH
 
 #extract Java
 tar -xzvf jdk-8u144-linux-x64.tar.gz
-
-mkdir $INSTALL_HOME/CTP
-cd CTP
 
 #download CTP
 wget --no-check-certificate http://mirc.rsna.org/download/CTP-installer.jar
@@ -34,4 +31,4 @@ wget --no-check-certificate http://mirc.rsna.org/download/CTP-installer.jar
 #extract CTP jar file
 jar xf CTP-installer.jar
 rm CTP-installer.jar
-
+rm -Rf META-INF/ config/ org/
