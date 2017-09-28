@@ -1,8 +1,13 @@
 #Install required packages
-yum install git wget screen vim
+#yum install git wget screen vim
 
 #Add ctpservice user
-adduser svcctp
+#adduser svcctp
+#passwd svcctp
+
+##########
+# manual: perform as root "chown -R svcctp:root /opt"
+##########
 
 #set install home directory
 INSTALL_HOME="/opt"
@@ -20,8 +25,11 @@ export JAVA_HOME PATH
 #extract Java
 tar -xzvf jdk-8u144-linux-x64.tar.gz
 
+mkdir $INSTALL_HOME/CTP
+cd CTP
+
 #download CTP
-wget --quiet --no-check-certificate http://mirc.rsna.org/download/CTP-installer.jar
+wget --no-check-certificate http://mirc.rsna.org/download/CTP-installer.jar
 
 #extract CTP jar file
 jar xf CTP-installer.jar
