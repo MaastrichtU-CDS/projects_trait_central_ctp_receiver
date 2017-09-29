@@ -39,3 +39,4 @@ cp ~/Repositories/trait_ctp_receiver/startup.sh startup.sh
 cp ~/Repositories/trait_ctp_receiver/ctp-proxy.conf /etc/httpd/conf.d/ctp-proxy.conf
 
 sudo systemctl enable httpd
+sudo /usr/sbin/setsebool -P httpd_can_network_connect 1
