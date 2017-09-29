@@ -9,13 +9,13 @@
             logConnections="no"
             name="HttpImportService"
             port="23104"
-            quarantine="quarantines/HttpImportService"
-            root="roots/HttpImportService"/>
+            quarantine="/data/ctpserver/receiver/quarantines/HttpImportService"
+            root="/data/ctpserver/receiver/roots/HttpImportService"/>
         <DicomExportService
             class="org.rsna.ctp.stdstages.DicomExportService"
             name="DicomExportService"
-            quarantine="quarantines/DicomExportService"
-            root="roots/DicomExportService"
+            quarantine="/data/ctpserver/quarantines/DicomExportService"
+            root="/data/ctpserver/roots/DicomExportService"
             url="dicom://XNAT:CTP@192.168.230.23:8104"/>
     </Pipeline>
 </Configuration>
