@@ -34,6 +34,7 @@ rm CTP-installer.jar
 rm -Rf META-INF/ config/ org/
 
 cp ~/Repositories/trait_ctp_receiver/config.xml CTP/config.xml
+cp ~/Repositories/trait_ctp_receiver/xnatOnly.script CTP/xnatOnly.script
 cp ~/Repositories/trait_ctp_receiver/startup.sh startup.sh
 
 cp ~/Repositories/trait_ctp_receiver/ctp-proxy.conf /etc/httpd/conf.d/ctp-proxy.conf
