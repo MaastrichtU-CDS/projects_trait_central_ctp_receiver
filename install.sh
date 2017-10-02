@@ -41,3 +41,7 @@ cp ~/Repositories/trait_ctp_receiver/ctp-proxy.conf /etc/httpd/conf.d/ctp-proxy.
 
 sudo systemctl enable httpd
 sudo /usr/sbin/setsebool -P httpd_can_network_connect 1
+
+#add CTP to startup
+cp ctpService-red.sh /etc/init.d/ctpService
+chkconfig --add ctpService
