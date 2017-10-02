@@ -14,6 +14,7 @@
         <DicomExportService
             class="org.rsna.ctp.stdstages.DicomExportService"
             name="DicomExportService"
+	    dicomScript="xnatOnly.script"
             quarantine="/data/ctpserver/quarantines/DicomExportService"
             root="/data/ctpserver/roots/DicomExportService"
             url="dicom://XNAT:CTP@192.168.230.23:8104"/>

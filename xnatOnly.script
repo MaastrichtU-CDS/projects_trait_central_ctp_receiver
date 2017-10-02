@@ -1,0 +1,2 @@
+([0010,4000].containsIgnoreCase("Project") * [0010,4000].containsIgnoreCase("Subject") * [0010,4000].containsIgnoreCase("Session"))
+
