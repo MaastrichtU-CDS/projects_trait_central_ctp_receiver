@@ -25,4 +25,28 @@
             root="/data/ctpserver/roots/DicomExportService"
             url="dicom://XNAT:CTP@192.168.230.23:8104"/>
     </Pipeline>
+
+    <Pipeline name="Move_NBIA">
+        <DirectoryImportService
+            name="DirectoryImportService"
+            id="moveNbiaImport"
+            class="org.rsna.ctp.stdstages.DirectoryImportService"
+            root="/data/ctpserver/nbiaMove/roots/import"
+            import="/data/ctpserver/nbiaMove/import"
+            interval="1000"
+            acceptDicomObjects="yes"
+            acceptXmlObjects="no"
+            acceptZipObjects="no"
+            acceptFileObjects="no" 
+            quarantine="/data/ctpserver/nbiaMove/quarantines/import" />
+        <HttpExportService
+            class="org.rsna.ctp.stdstages.HttpExportService"
+            name="HTTP Export Service"
+            quarantine="/data/ctpserver/nbiaMove/quarantines/export-service"
+            root="/data/ctpserver/nbiaMove/roots/export-service"
+            sendDigestHeader="no"
+            username="client"
+            password="client"
+            url="http://app19-prd-vh.trait.vancis.nl:23104"/>
+    </Pipeline>
 </Configuration>
