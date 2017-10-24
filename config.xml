@@ -15,7 +15,7 @@
             name="XnatOnlyFilter"
             id="stage ID"
             class="org.rsna.ctp.stdstages.DicomFilter"
-            root="/data/ctpserver/receiver/roots/xnatFilter"
+            root="/data/ctpserver/nbiaMove/import"
             script="xnatOnly.script"
             quarantine="/data/ctpserver/receiver/quarantines/xnatFilter" />
         <DicomExportService
